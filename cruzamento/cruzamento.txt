@@ -1,0 +1,49 @@
+/*
+Autor: Kamila Pereira dos Santos
+Data: 20/02/2025
+*/
+
+#define pinLedVermelho1 13
+#define pinLedAmarelo1 12
+#define pinLedVerde1 11
+#define pinLedVermelho2 4
+#define pinLedAmarelo2 3
+#define pinLedVerde2 2
+#define tempoLigado1 5000
+#define tempoLigado2 3000
+#define tempoLigado3 2000
+
+
+void setup()
+{
+  pinMode(pinLedVermelho1, OUTPUT);
+  pinMode(pinLedVerde1, OUTPUT);
+  pinMode(pinLedAmarelo1, OUTPUT);
+  pinMode(pinLedVermelho2, OUTPUT);
+  pinMode(pinLedVerde2, OUTPUT);
+  pinMode(pinLedAmarelo2, OUTPUT);
+}
+
+void loop()
+{
+  digitalWrite(pinLedVermelho1, HIGH);
+  digitalWrite(pinLedVerde2, HIGH);
+  delay(tempoLigado1);
+  digitalWrite(pinLedVerde2, LOW);
+  
+  digitalWrite(pinLedAmarelo2, HIGH);
+  delay(tempoLigado2);
+  digitalWrite(pinLedVermelho1, LOW);
+  digitalWrite(pinLedAmarelo2, LOW);
+  
+  digitalWrite(pinLedVerde1, HIGH);
+  digitalWrite(pinLedVermelho2, HIGH);
+  delay(tempoLigado2);
+  digitalWrite(pinLedVerde1, LOW);
+  
+  digitalWrite(pinLedAmarelo1, HIGH);
+  delay(tempoLigado3);
+  digitalWrite(pinLedVermelho2, LOW);
+  digitalWrite(pinLedAmarelo1, LOW);
+
+}
